@@ -4,6 +4,8 @@ services:
     restart: always
     volumes:
       - ./volumes/mongo_data_db:/data/db
+    ports:
+      - "${MONGO_HOST_PORT:?}:27017/tcp"
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME:?}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD:?}
