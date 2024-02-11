@@ -1,6 +1,6 @@
 services:
   mongo:
-    image: mongo:6
+    image: mongo:7
     restart: always
     volumes:
       - ./volumes/mongo_data_db:/data/db
